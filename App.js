@@ -1,11 +1,30 @@
-const heading = React.createElement("h1", {id :"heading"}, "hello wrold react");
-const root = ReactDOM.createRoot(document.getElementById("root"))
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-root.render(heading)
+const heading = React.createElement("p1", {}, "test");
 
+//jsx
 
-const parent = React.createElement("div",{id : "parent"},
- React.createElement("div",{id : "child"}, 
- [ React.createElement("h1",{},"iam in h1"), React.createElement("h2",{},"iam in h2")]
-  ) );
-root.render(parent)
+const jsxHeading = (
+  <h1 id="test" className="testing1">
+    heading in jsc
+  </h1>
+);
+
+const Title = () => {
+  return <h1>title comp</h1>;
+};
+
+const number = 1000;
+const HeadingComp = () => {
+  return (
+    <div>
+      {number}
+      <Title /> <h1>react functional component</h1>
+    </div>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<HeadingComp />);
