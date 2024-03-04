@@ -9,7 +9,7 @@ const Header = () => {
 
   const[btnName, setBtnName] = useState("Login");
     return (
-      <div className="flex justify-between bg-pink-100 ">
+      <div className="flex justify-between bg-green-100 ">
         <div className="logo-container">
           <img className="w-40" src={lOGO_URL} />
         </div>
